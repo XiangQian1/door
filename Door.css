@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    width: 870px;
+    margin: 100px auto;
+}
+li {
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+}
+.bor {
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+    height: 527px;
+    perspective: 600px;
+}
+.door {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    transform-origin: right;
+    transition: all 2s linear;
+    transform-style: preserve-3d;
+}
+
+.Gate_number {
+    font-size: 20px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+.Door_handle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.bor:hover .door {
+    transform: rotateY(-80deg);
+}
+.bor:hover .Door_hou {
+    animation: 3s Door_hou .5s forwards  ;
+}
+
+.Door_hou{
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Door_hou video{
+    width: 100%;
+    height: 100%;
+}
+@keyframes Door_hou {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* 抖音门的 边框 门把手边框 门的背景颜色 */
+.bor_tik 
+,.Door_handle_tik{
+    border: 4px solid #76003e;
+}
+.door_bgc_tik{
+    background-color: #230029;
+} 
+/* 抖音门的文字效果 */
+.Gate_number_tik
+{
+    text-shadow: -6px -5px 3px #76003e ;
+}
+
+/* 网抑云的 边框 门把手边框 门的背景颜色 */
+.bor_music 
+,.Door_handle_music{
+    border: 4px solid #b10a0a;
+}
+.door_bgc_music{
+    background-color: #ff002d;
+}
+/* 微信的 边框 门把手边框 门的背景颜色 */
+.bor_WeChat
+,.Door_handle_WeChat{
+    border: 4px solid #00753d;
+}
+.door_bgc_WeChat{
+    background-color: #00d869;
+}

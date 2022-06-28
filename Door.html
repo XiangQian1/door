@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Door--向前</title>
+    <link rel='shortcut icon' href='favicon.ico' />
+    <link rel="stylesheet" href="Door.css">
+</head>
+
+<body>
+    <script>
+        alert('向前出品');
+        prompt('请输入向前');
+    </script>
+    <ul>
+        <!-- 抖音 tik-->
+        <li>
+            <!-- 外层盒子的边框 -->
+            <div class="bor bor_tik">
+                <!-- 门 -->
+                <div class="door door_bgc_tik">
+                    <!-- 门牌号 -->
+                    <div class="Gate_number Gate_number_tik">
+                        抖音
+                    </div>
+                    <!-- 门把手 -->
+                    <div class="Door_handle Door_handle_tik">
+                    </div>
+                </div>
+                <!-- 门后 -->
+                <main class="Door_hou Door_hou_tik">
+                    <!-- 视频 -->
+                    <video id="vid" src="vie/Tik_Tok.MP4"></video>
+                </main>
+            </div>
+        </li>
+
+        <!-- 网抑云 music-->
+        <li>
+            <!-- 外层盒子的边框 -->
+            <div class="bor bor_music">
+                <!-- 门 -->
+                <div class="door door_bgc_music">
+                    <!-- 门牌号 -->
+                    <div class="Gate_number">
+                        网抑云
+                    </div>
+                    <!-- 门把手 -->
+                    <div class="Door_handle Door_handle_music">
+                    </div>
+                </div>
+                <!-- 门后 -->
+                <main class="Door_hou">
+                    <!-- 视频 -->
+                    <video id="vid_music" src="vie/music.MP4" muted autoplay loop></video>
+                </main>
+            </div>
+        </li>
+        <!-- 微信 WeChat-->
+        <li>
+            <!-- 外层盒子的边框 -->
+            <div class="bor bor_WeChat">
+                <!-- 门 -->
+                <div class="door door_bgc_WeChat">
+                    <!-- 门牌号 -->
+                    <div class="Gate_number">
+                        微信
+                    </div>
+                    <!-- 门把手 -->
+                    <div class="Door_handle Door_handle_WeChat">
+                    </div>
+                </div>
+                <!-- 门后 -->
+                <main class="Door_hou">
+                    <!-- 视频 -->
+                    <video id="" src="vie/WeChat.MP4" autoplay muted loop></video>
+                </main>
+            </div>
+        </li>
+
+    </ul>
+    <script>
+        var bor = document.querySelector('.bor');
+        var Door_hou = bor.querySelector('.Door_hou');
+        var vid = Door_hou.querySelector('#vid');
+
+        bor.onmouseover = function () {
+            vid.load(); // 重新加载 
+
+            // 因为chrom把自动播放禁用了，所以Chrom只能静音才能自动播放 
+            vid.volume = 0; //    使用Chrom 把该属性值修改为0 或vid.muted = true; 
+            //  其他浏览器则把属性值修改为 0-1之间不为0的数
+
+            vid.play(); // 播放  
+        }
+        bor.onmouseout = function () {
+            vid.pause(); // 暂停
+        }
+    </script>
+</body>
+
+</html>
